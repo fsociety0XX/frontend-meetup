@@ -1,0 +1,99 @@
+#navbar{
+   
+    .nav{
+        position: fixed;
+        background-color: var(--white);
+        padding: 10px 5px;
+        overflow: scroll;
+        @include transition(.5s);
+        z-index:60;
+        @include mq('phone'){
+            bottom: -16px;
+            width: 100vw;
+
+            span{
+                display:none;
+            }
+        }
+        @media only screen and (min-width: 768px){
+            top: 76px;
+            width: 65px;
+            height: 100vh;
+        }
+
+        /*Show menu*/
+        &.show{
+            width: 61px + 112px;
+        }
+
+        &__navbar{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            @include mq('phone'){
+                flex-direction: row;
+            }
+        }
+
+        &__item{
+            width: 100%;
+        }
+
+        &__link{
+            display: flex;
+            align-items: center;
+            padding: 14px 14px;
+            border-radius: 5px;
+            color: var(--icon-gray);
+            @include transition(.3s);
+            cursor:pointer;
+            text-decoration: none;
+            @include mq('phone'){
+                justify-content: center;
+            }
+
+            &:hover{
+                background-color: var(--light-purple);
+                color: var(--white);
+            }
+
+            &.active{
+                background-color: var(--purple);
+                color: var(--white);
+            }
+
+            .MuiSvgIcon-root{
+                font-size: 1.5rem;
+                margin-right: 1.2rem;
+                @include mq('phone'){
+                    margin-right: 0rem;
+                }
+            }
+        }
+        &__text{
+            font-weight: $semi-bold;
+        }
+    }
+}
+
+//This style will only apply when sideMenu.scss file is in use
+.expander{
+    padding: 75px 0 0 173px !important;
+    @include transition(.5s !important);
+}
+
+.hamburger{
+    @include mq('phone'){
+        display:none;
+    }
+}
+
+#dashboard{
+    @include mq('phone'){
+        padding:100px 15px 70px;
+    }
+}

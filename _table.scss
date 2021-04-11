@@ -1,0 +1,177 @@
+.ReactTable {
+    border-radius: 8px;
+    border:none;
+    .rt-tr {
+        width: 100%;
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    .rt-table {
+        width: 100%;
+        border-radius: 8px;
+        border:none;
+
+        .rt-thead {
+            box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+            display: flex;
+            width: 100%;
+            background: var(--darkth-icon-gray);
+            color: var(--white);
+            font-weight: $bold;
+            text-transform: uppercase;
+
+            .rt-th {
+                .rt-resizable-header-content {
+                    color: var(--white);
+                    position: relative;
+                    font-weight: 800;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        color: var(--white);
+                        font-size: 12px;
+                        margin: 0 10px;
+                        top: 48%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            .rt-th.-cursor-pointer{
+                border-right:none;
+            }
+
+
+            .rt-th.-sort-asc {
+                box-shadow:none;
+                .rt-resizable-header-content {
+                    &::after {
+                        content: "\25bc";
+                    }
+                }
+            }
+
+            .rt-th.-sort-desc {
+                box-shadow:none;
+                .rt-resizable-header-content {
+                    &::after {
+                        content: '\25b2';
+                    }
+                }
+            }
+        }
+
+        .rt-thead.-header {
+            padding: 5px 10px;
+        }
+
+        .rt-tbody {
+            font-weight: 500;
+            background: var(--white);
+
+            .rt-tr-group {
+                @include transition(1s);
+                
+                &:hover {
+                    box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.28);
+                    background: var(--light-purple);
+                }
+            }
+
+            .rt-td {
+                border-right: none;
+                 
+                & > a{
+                    color: var(--purple);
+                    font-weight: $semi-bold;
+                }
+            }
+        }
+    }
+}
+
+.actions{
+    text-align: center;
+
+    .delete {
+        color: var(--black);
+
+        &:hover{
+            color: var(--red);
+            background: var(--light-red);
+        }
+    }
+    
+    .view {
+        color: var(--black);
+        &:hover{
+            color: var(--green);
+            background: var(--light-green);
+        }
+    }
+    
+    .edit {
+        color: var(--black);
+        &:hover{
+            color: var(--blue);
+            background: var(--light-blue);
+        }
+    }
+    
+    .btn{
+        cursor:pointer;
+        padding:15px 10px 0;
+        border-radius: 4px;
+    }
+}
+
+.pagination-bottom{
+    
+    .Table__pagination{
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 10px;
+        margin: 20px 0px 20px 0;
+        float: right;
+        background-color: var(--white);
+        border-radius: 20px;
+
+        .previous-arrow, .next-arrow{
+            font-size: 25px;
+            cursor: pointer;
+            color: var(--black);
+            outline: none;
+            border: none;
+            background:var(--white);
+            margin-top:-3px;
+
+            &:disabled {
+                font-size: 25px;
+                cursor: not-allowed;
+                color: var(--dark-gray);
+                outline: none;
+                border: none;
+                background:var(--white);
+            }
+        }
+
+        button{
+            background-color: var(--white);
+            color: var(--black);
+            border-radius: 8px;
+            margin: 5px;
+            @include transition(all 0.3s ease);
+            padding: 7px 11px;
+            border:1px solid var(--white);
+            outline:none;
+            cursor: pointer;
+        }
+
+        .Table__visiblePagesWrapper .Table__pageButton--active{
+            color: var(--white);
+            background-color:var(--purple);
+            font-weight:500;
+        }
+    }
+}

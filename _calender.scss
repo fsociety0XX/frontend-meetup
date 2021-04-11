@@ -1,0 +1,28 @@
+#calender{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    .calender-wrapper{
+        background: var(--light-purple);
+        padding: 30px;
+        border-radius: 8px;
+        border: 2px solid var(--purple);
+
+        h3{
+            color: var(--black);
+            text-align: center;
+            display:inline-block;
+            width:200px;
+            font-size: $big;
+            font-weight: $semi-bold;
+        }
+        img{
+            width: 200px;
+            background: var(--white);
+            display:inline-block;
+            vertical-align: middle;
+        }
+    }
+}

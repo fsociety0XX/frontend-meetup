@@ -1,0 +1,179 @@
+.logo{
+    color:var(--dark-gray);
+    font-size:$logo;
+    font-weight:$bold;
+    background:var(--white);
+
+    span{
+        color:var(--purple);
+        text-decoration: none;
+    }
+}
+
+.button{
+    font-size:$normal;
+    font-weight:$semi-bold;
+    color:var(--white);
+    background:var(--purple);
+    padding: 15px;
+    border-radius: 4px;
+    @include transition(all 300ms ease);
+    cursor: pointer;
+    
+    &:hover {
+        background-color: darken($purple, 10);
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:var(--purple);
+    color:var(--white);
+    text-align: right;
+    padding:10px;
+}
+
+#dashboard{
+    position: relative;
+    margin: 0;
+    padding: 75px 0 0 61px;
+    font-family: $font-family;
+    background-color: var(--background);
+    @include transition(.5s);
+}
+
+/* Change the background color of form on autocomplete) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+}
+
+/*Scrollbar style */
+::-webkit-scrollbar {
+    width: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--gray) ;
+border-radius: 10px;
+}
+
+
+/* Common style for search bars */
+.search_container{
+    position: relative;
+    @include transition(all 1s);
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid var(--light-purple);
+    padding: 5px;
+    margin:0 20px;
+
+    .search{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 42.5px;
+        line-height: 30px;
+        outline: 0;
+        border: 0;
+        display: none;
+        font-size: 1em;
+        border-radius: 20px;
+        padding: 0 20px;
+        background:var(--white);
+        color:var(--black);
+    }
+
+    svg{
+        box-sizing: border-box;
+        padding: 10px;
+        width: 42.5px;
+        height: 42.5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        color:var(--purple);
+        text-align: center;
+        font-size: 1.2em;
+        @include transition(all 1s);
+    }
+
+    &:hover{
+        width: 200px;
+        cursor: pointer;
+
+        .search{
+            display: block;
+        }
+
+        svg{
+            background: var(--purple);
+            color: var(--white);;
+        }
+    }
+
+    &:focus-within{
+        width: 200px;
+        cursor: pointer;
+
+        .search{
+            display: block;
+        }
+
+        svg{
+            background: var(--purple);
+            color: var(--white);
+        }
+    }
+}
+
+.hamburger{
+    margin: 15px 10px;
+    padding:10px;
+    cursor:pointer;
+    z-index: 51;
+    position:fixed;
+    color:var(--icon-gray);
+}
+
+
+//Dark mode enhancements
+body.dark-mode{
+    #homepage{
+        .team-profiles{
+            .profile-card:hover{
+                box-shadow: rgba(247, 249, 252, 0.25) 0px 8px 16px -4px, rgba(134, 132, 132, 0.836) 0px 0px 1px;
+            }
+            
+        }
+    }
+    .ReactTable .rt-table .rt-tbody .rt-tr-group:hover {
+        box-shadow: 0 1px 9px 1px rgba(0, 0, 0, 0.28);
+        background: rgba(202, 181, 252,0.2);
+    }
+
+    .register-wrapper{
+        .register{
+            box-shadow: 0 5px 20px 0 rgba(95, 95, 95, 0.829);
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active  {
+        -webkit-text-fill-color: white;
+    }
+}

@@ -1,0 +1,40 @@
+#homepage{
+    .team-profiles{
+        .inner{
+            padding:20px 10px;
+
+            .profile-card{
+                padding:20px;
+                background:var(--white);
+                margin:15px 0;
+                box-shadow: 0 .2px .25rem rgba(0,0,0,.075);
+                border-radius: 4px;
+                transition: box-shadow 0.5s ease 0s;
+
+                &:hover{
+                    box-shadow: rgba(9, 30, 66, 0.25) 0px 8px 16px -4px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+                }
+
+                .profile-image{
+                    border-radius: 50%;
+                    width:150px;
+                    height:150px;
+                    margin: 0 auto;
+                }
+
+                .profile-name{
+                    text-align:center;
+                    margin:15px 0 5px;
+                    font-weight:$semi-bold;
+                }
+                
+                .profile-email{
+                    text-align:center;
+                    margin:0;
+                    font-weight:$semi-bold;
+                    color: var(--icon-gray);
+                }
+            }
+        }
+    }
+}

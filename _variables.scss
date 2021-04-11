@@ -1,0 +1,146 @@
+:root {
+    --darkth-background: #1F2129;
+    --darkth-white: #272B33;
+    --darkth-gray: #ccc;
+    --darkth-icon-gray: #6A6C7B;
+    --darkth-dark-gray: #A7A7A7;
+    --darkth-black: #ffffff;
+    --darkth-placeholder: #fff;
+    
+    --darkth-purple: #BB86FC;
+    --darkth-light-purple: rgba(200, 144, 247, 0.6);
+    --darkth-green: #2EC469;
+    --darkth-light-green: rgb(142, 221, 173);
+    --darkth-red: #DA2748;
+    --darkth-light-red: rgb(235, 140, 165);
+    --darkth-blue: #42A8F7;
+    --darkth-light-blue: rgb(153, 188, 233);
+
+    --darkth-popup-bg : rgba(65, 58, 73,0.65);
+}
+
+body{
+    --background: #F6F7FB;
+    --white: #ffffff;
+    --gray: #dddddd;
+    --icon-gray: #A7A6B2;
+    --dark-gray: #565C6A;
+    --black: #060b26;
+    --placeholder: #adafca;
+
+    --purple: #A17AFF;
+    --light-purple: #F0EAFF;
+    --green: #2EC469;
+    --light-green: #CBF3DB;
+    --red: #FA5B5B;
+    --light-red: #FCC8C8;
+    --blue: #71B6F9;
+    --light-blue: #DDEDFE;
+
+    --popup-bg: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode{
+    --background: var(--darkth-background);
+    --white: var(--darkth-white);
+    --gray: var(--darkth-gray);
+    --icon-gray: var(--darkth-icon-gray);
+    --dark-gray: var(--darkth-dark-gray);
+    --black: var(--darkth-black);
+    --placeholder: var(--darkth-placeholder);
+
+    --purple: var(--darkth-purple);
+    --light-purple: var(--darkth-light-purple);
+    --green: var(--darkth-green);
+    --light-green: var(--darkth-light-green);
+    --red: var(--darkth-red);
+    --light-red: var(--darkth-light-red);
+    --blue: var(--darkth-blue);
+    --light-blue: var(--darkth-light-blue);
+
+    --popup-bg: var(--darkth-popup-bg);
+}
+
+// Color Pallete
+$purple  : #A17AFF;
+
+// Fonts
+$font-family: 'Nunito', sans-serif;
+
+// Define all your font-weights you will be using all over site.
+$normal : 16px;
+$medium:18px;
+$small : 14px;
+$big: 24px;
+$logo : 30px;
+
+$extra-light : 200;
+$light :300;
+$regular : 400;
+$semi-bold : 600;
+$bold : 700;
+$extra-bold : 800;
+
+/* MIXIN : MEDIA QUERIES
+ *    EX : @include mq( 'lap-and-up' ) { CODE }
+ * ------------------------------------------------------------------------- */
+$phone: "screen and (max-width: 767px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1024px)";
+$phone-and-tab: "screen and (max-width: 1024px )";
+$tablet-and-up: "screen and (min-width: 768px)";
+$tablet-portrait: "screen and (min-width: 768px) and (max-width: 959px)";
+$tablet-landscape: "screen and (min-width: 960px) and (max-width: 1024px)";
+$lap: "screen and (min-width: 1025px) and (max-width: 1219px)";
+
+@mixin mq($alias) {
+    @if $alias=="phone" {
+        @media #{$phone} {
+            @content;
+        }
+    }
+
+    @else if $alias=="tablet" {
+        @media #{$tablet} {
+            @content;
+        }
+    }
+
+    @else if $alias=="phone-and-tab" {
+        @media #{$phone-and-tab} {
+            @content;
+        }
+    }
+
+    @else if $alias=="tablet-and-up" {
+        @media #{$tablet-and-up} {
+            @content;
+        }
+    }
+
+    @else if $alias=="tablet-portrait" {
+        @media #{$tablet-portrait} {
+            @content;
+        }
+    }
+
+    @else if $alias=="tablet-landscape" {
+        @media #{$tablet-landscape} {
+            @content;
+        }
+    }
+
+    @else if $alias=="lap" {
+        @media #{$lap} {
+            @content;
+        }
+    }
+}
+
+/*===== z index =====*/
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}

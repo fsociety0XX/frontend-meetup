@@ -1,0 +1,89 @@
+#landing-page{
+    background:var(--white);
+    padding: 0 50px;
+    height:100vh;
+    @include mq('phone'){
+        padding: 0;
+    }
+
+    .desktop-header{
+        overflow: hidden;
+        background-color: var(--white);
+        padding: 20px 0px;
+
+        a {
+            float: left;
+            color: var(--black);
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 25px;
+            @include transition(0.5s);
+
+            @include mq('phone'){
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            &:hover{
+                color:var(--purple);
+            }
+        }
+
+        .header-right {
+            float: right;
+            @include mq('phone'){
+                float: none;
+            }
+
+            .link{
+                font-weight: $semi-bold ;
+            }
+        }
+    }
+
+    .error-for-public-user{
+        
+        p{
+            font-weight:$semi-bold;
+            padding: 10px;
+            border: 2px solid var(--purple);
+            background: var(--light-purple);
+
+            svg{
+                vertical-align: middle;
+            }
+        }
+        
+    }
+
+    .landing-body{
+        padding:25px 0;
+
+        .banner-container{
+            height:465px;
+            padding:120px 0;
+            @include mq( 'phone-and-tab' ){
+                padding: 40px 0;
+                text-align: center;
+                height:auto;
+            }
+
+            .banner-text{
+                font-size:40px;
+                line-height:40px;
+            }
+
+            .button-container{
+                margin-top:30px;
+            }
+
+            .small-description{
+                padding: 15px 0;
+            }
+        }
+    }
+}

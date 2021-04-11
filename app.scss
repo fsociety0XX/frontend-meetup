@@ -1,0 +1,20 @@
+// First include Global SCSS files at top.
+@import "./global/variables";
+@import "./global/fonts";
+@import "./global/mixin";
+@import "./global/reset";
+@import "./global/grid";
+@import "./global/common";
+
+// Continue Including all your Page SCSS below.
+@import "./pages/index";
+@import "./pages/landingPage";
+@import "./pages/login";
+@import './pages/header';
+@import "./pages/sideMenu";
+@import "./pages/profiles";
+@import "./pages/table";
+@import "./pages/discussion";
+@import "./pages/calender";
+@import "./pages/popup";
+@import "./pages/loader";

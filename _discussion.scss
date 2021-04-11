@@ -1,0 +1,79 @@
+#discussion,
+#resource {
+    height: 100vh;
+    @include mq('phone') {
+        height:100%;
+    }
+
+    .discussion-wrapper {
+        padding: 20px 20px 80px;
+
+        .discussion-container {
+            padding: 10px 20px;
+
+            h2,
+            .button,
+            .search_container,
+            .back {
+                display: inline-block;
+            }
+
+            h2,
+            .back {
+                float: left;
+                font-size: $big;
+                font-weight: $semi-bold;
+
+                @include mq('phone') {
+                    float: none;
+                    margin: 10px auto;
+                }
+            }
+
+            .back {
+                svg {
+                    margin-top: 4px;
+                }
+            }
+
+            .align-right {
+
+                .button,
+                .search_container {
+                    float: right;
+
+                    @include mq('phone') {
+                        float: none;
+                        margin: 10px auto;
+                        display:block;
+                    }
+                }
+
+                @include mq('phone') {
+                    text-align: center;
+                    margin: 0px auto;
+                }
+            }
+        }
+
+        .author-details {
+            width: 30%;
+            margin: 0 auto;
+            text-align: left;
+
+            .author-img {
+                border-radius: 50%;
+                height: 35px;
+                width: 35px;
+                margin: 0px auto;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            .author-name {
+                display: inline-block;
+            }
+        }
+    }
+}

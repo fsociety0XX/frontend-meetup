@@ -1,0 +1,50 @@
+#header{
+    background:var(--white);
+    padding: 15px 10px 15px 65px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    z-index:50;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+
+    .logo{
+        display:inline-block;
+    }
+
+    .header-right {
+        float: right;
+        margin-right:30px;
+        @include mq('phone'){
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .theme-icon{
+            display: inline-block;
+            vertical-align: super;
+            margin-right: 15px;
+            cursor:pointer;
+            color:var(--purple);
+        }
+
+        .user-details{
+            display:inline;
+
+            .user-image{
+                border-radius: 50%;
+                height:40px;
+                width:40px;
+                display:inline-block;
+                margin-right:10px;
+            }
+    
+            .user-info{
+                display:inline-block;
+                vertical-align: top;
+                font-size: $small;
+            }
+        }
+    }
+}
